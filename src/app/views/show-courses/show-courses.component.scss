@@ -1,0 +1,43 @@
+/* message */
+.message-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.message-wrapper > .image {
+  margin: 90px 0 40px 0;
+}
+
+.message-content {
+  letter-spacing: 0.5px;
+}
+
+.message-content > .title {
+  font-size: 24px;
+  font-weight: 400;
+  color: #2d2d32;
+  margin-bottom: 24px;
+}
+
+.button-default {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 103px;
+  height: 48px;
+  border-radius: 4px;
+  background-color: #ef3c86;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  transition: all 200ms linear;
+}
+
+.button-default:hover {
+  background-color: #d0266d;
+}

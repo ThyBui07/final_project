@@ -1,0 +1,27 @@
+<header class="header-section">
+  <a href="./index.html" class="site-logo"><img src="../../../assets/img/logo.png" alt=""></a>
+  <div class="nav-switch">
+    <i class="fa fa-bars"></i>
+  </div>
+  <div class="nav-warp">
+    <div class="user-panel" *ngIf="currentUser; else loginButton" (click)="logout()">
+      <a href="#">Test</a>
+    </div>
+    <!-- login button  -->
+    <ng-template #loginButton>
+      <div class="user-panel">
+        <a href="#" data-toggle="modal" data-target="#signinmodal">LogIn</a>
+      </div>
+   </ng-template>
+    <!-- end login button  -->
+    <ul class="main-menu">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./about.html">About us</a></li>
+      <li><a href="./service.html">Services</a></li>
+      <li><a href="./blog.html">News</a></li>
+      <li><a href="./contact.html">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<log-in-component></log-in-component>

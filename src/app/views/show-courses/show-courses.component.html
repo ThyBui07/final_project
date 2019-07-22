@@ -1,0 +1,37 @@
+<bread-crumb-component></bread-crumb-component>
+
+<!-- mess-wrapper -->
+<ng-template #Error class="message-wrapper">
+	<img class="image" src="http://i63.tinypic.com/29kz4id.png" alt="illustration 404">
+
+	<div class="message-content">
+		<h1 class="title">The page you are looking for can not be found</h1>
+		<a class="button-default">Go back</a>
+	</div>
+</ng-template>
+<!-- end mess-wrapper -->
+
+<section class="domain-search-section sc-about-page">
+  <div class="container" *ngIf="codeIsValid; else Error" >
+  <div class="section-title">
+  <img src="../../../assets/img/section-title-icon.png" alt="#">
+  <p>The best out there</p>
+  <h2>Most popular Courses</h2>
+  </div>
+  <!-- card -->
+  <div class="col-lg-4 col-md-6 card" *ngFor="let course of courses ">
+    <img class="card-img-top" [src]="course.hinhAnh" [alt]="course.biDanh">
+    <div class="card-body">
+      <h4 class="card-title"> {{ course.tenKhoaHoc }}</h4>
+      <h5 class="card-title"> {{ course.maKhoaHoc }}</h5>
+      <p class="card-text"> {{ course.moTa }} </p>
+      <a href="#" class="btn btn-primary" style="background-color: #EB2B63">Take Course</a>
+    </div>
+  </div>
+  <!-- end card -->
+  </div>
+</section>
+
+
+
+

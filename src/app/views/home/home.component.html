@@ -1,0 +1,93 @@
+<!-- Hero section -->
+<section class="hero-section set-bg" data-setbg="../../../assets/img/bg.jpg">
+  <div class="container h-100">
+    <div class="hero-content text-white">
+      <div class="row">
+        <div class="col-lg-6 pr-0">
+          <h2>Unbeatable Offers</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. </p>
+          <!-- form -->
+          <div class="domain-form-warp">
+            <form class="domain-search-form">
+              <input type="text" #courseSearchInput placeholder="What do you want to learn?">
+              <button class="site-btn">Search</button>
+            </form>
+            <p>Nullam lacinia ex eleifend orci porttitor, suscipit interdum augue condimentum. Etiam pretium turpis eget nibh laoreet iaculis</p>
+          </div>
+          <!-- <a href="#" class="site-btn">Get your plan</a> -->
+        </div>
+      </div>
+      <div class="hero-rocket">
+        <img src="../../../assets/img/rocket.png" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Hero section end -->
+
+<!-- Features section -->
+<section class="features-section spad">
+  <div class="container">
+    <div class="section-title">
+      <img src="../../../assets/img/section-title-icon.png" alt="#">
+      <p>The best out there</p>
+      <h2>See our features</h2>
+    </div>
+    <div class="row" id="courseCategory">
+      <div class="col-lg-4 col-md-6 feature-item" *ngFor="let courseByCategory of courseByCategories">
+        <div class="box"[routerLink]="['/courses/'+ courseByCategory.maDanhMuc]">
+          <h4 class="title"><a style="color:#EB2B63" href="">{{ courseByCategory.maDanhMuc }}</a></h4>
+          <p class="description">{{ courseByCategory.tenDanhMuc }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Features section end -->
+
+<!-- Domain search section - Testominals -->
+<section class="domain-search-section spad set-bg" data-setbg="../../../assets/img/domain-bg.jpg">
+  <div class="container">
+    <div class="section-title st-white">
+      <img src="../../../assets/img/section-title-icon.png" alt="#">
+      <p>The best out there</p>
+      <h2>See our features</h2>
+    </div>
+    <!-- <div class="domain-form-warp">
+      <form class="domain-search-form">
+        <input type="text" placeholder="Enter your website’s name">
+        <button class="site-btn">Search</button>
+      </form>
+      <p>Nullam lacinia ex eleifend orci porttitor, suscipit interdum augue condimentum. Etiam pretium turpis eget nibh laoreet iaculis</p>
+    </div> -->
+    <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig">
+
+      <!-- <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+            <img src="{{ slide.img }}" alt="" width="100%">
+      </div> -->
+      <div ngxSlickItem *ngFor="let slide of slides" id="slide">
+        <p>
+          Dolores quae porro consequatur aliquam, incidunt fugiat culpa esse aute nulla. duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore
+        </p>
+        <h3>{{ slide.name }}</h3>
+        <h4>{{ slide.job }}</h4>
+      </div>
+
+    </ngx-slick>
+  </div>
+</section>
+<!-- Domain search section end -->
+
+<!-- clients list  -->
+<section class="features-section spad">
+  <div class="container">
+    <div class="section-title">
+      <img src="../../../assets/img/section-title-icon.png" alt="#">
+      <p>The best out there</p>
+      <h2>See our features</h2>
+    </div>
+    <!-- slick -->
+  </div>
+</section>
+
+
