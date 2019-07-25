@@ -1,0 +1,23 @@
+// .dropdown:click >.dropdown-menu {
+//   display: block;
+// }
+
+// .dropdown>.dropdown-toggle:active {
+//   /*Without this, clicking will make it sticky*/
+//     pointer-events: none;
+// }
+
+#test{
+  border-left: 1px solid #ffffff;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 50px;
+}
+
+// .dropdown:hover >.dropdown-menu {
+//     display: block;
+//   }
+//   .dropdown>.dropdown-toggle:active {
+//   /*Without this, clicking will make it sticky*/
+//     pointer-events: none;
+// }

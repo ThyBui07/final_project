@@ -1,0 +1,41 @@
+<div *ngFor="let courseInfo of courseInfo">
+  <section _ngcontent-obc-c6="" class="page-top-section set-bg" data-setbg="../../../assets/img/page-top-bg.jpg"
+    id="breadcrumb" style="background-image: url(&quot;../../../assets/img/page-top-bg.jpg&quot;);">
+    <div _ngcontent-obc-c6="" class="container">
+      <h2 _ngcontent-obc-c6="">{{ courseInfo.tenKhoaHoc }}</h2>
+    </div>
+  </section>
+  <section class="about-section spad" style="padding-top:95px; padding-bottom: 74px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h3>{{ courseInfo.moTa }}</h3>
+          <p>Nullam lacinia ex eleifend orci porttitor, suscipit interdum augue condimentum. Etiam pretium turpis eget nibh laoreet iaculis. Vivamus auctor mi eget odio feugiat, quis aliquet velit ornare. Integer egestas sit amet neque sed elementum. Fusce ut turpis felis. Etiam pretium pharetra augue, ac porttitor dolor consequat eget. Cras tempor suscipit enim vehicula ultrices. Mauris sed orci blandit, rhoncus massa non, tincidunt odio. Ut ullamcorper lobortis hendrerit.</p>
+          <button class="btn btn-primary" style="background-color: #EB2B63" *ngIf="authenticated; else loginRequired"
+            (click)="registerCourse()">Register Course</button>
+          <ng-template #loginRequired>
+            <button type="button" class="btn btn-primary" style="background-color: #EB2B63" data-toggle="modal"
+              data-target="#myModal">Take Course</button>
+          </ng-template>
+        </div>
+        <div class="col-lg-6">
+          <img src="{{ courseInfo.hinhAnh }}" alt="{{courseInfo.moTa}}">
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- Annoucemnet -->
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p>Log in required!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -25,12 +25,31 @@
       <h4 class="card-title"> {{ course.tenKhoaHoc }}</h4>
       <h5 class="card-title"> {{ course.maKhoaHoc }}</h5>
       <p class="card-text"> {{ course.moTa }} </p>
-      <a href="#" class="btn btn-primary" style="background-color: #EB2B63">Take Course</a>
+      <!-- <a class="btn btn-primary" style="background-color: #EB2B63" *ngIf="authenticated; else loginRequired" (click)="registerCourse()">Register Course</a> -->
+      <button type="button" class="btn btn-primary" style="background-color: #2E1676" [routerLink]="''+ course.maKhoaHoc">Get Info</button>
+      <!-- <ng-template #loginRequired>
+          <button type="button" class="btn btn-primary" style="background-color: #EB2B63" data-toggle="modal" data-target="#myModal">Take Course</button>
+      </ng-template> -->
     </div>
   </div>
   <!-- end card -->
   </div>
 </section>
+
+<!-- Annoucemnet -->
+<!-- Modal -->
+<!-- <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-body">
+          <p>Log in required!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
 
 
 

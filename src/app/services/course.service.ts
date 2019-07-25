@@ -20,4 +20,12 @@ export class CourseService extends ApiService {
     const uri = `${base_uri}/LayKhoaHocTheoDanhMuc?maDanhMuc=${category_code}&MaNhom=GP02`;
     return this.get(uri);
   }
+
+  courseRegister(data){
+    return this.post(`${base_uri}/DangKyKhoaHoc`,data)
+  }
+
+  courseById(id){
+    return this.get(`${base_uri}/LayThongTinKhoaHoc?maKhoaHoc=${id}`)
+  }
 }

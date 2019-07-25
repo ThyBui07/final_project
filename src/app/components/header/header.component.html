@@ -5,8 +5,17 @@
   </div>
   <div class="nav-warp">
     <div class="user-panel" *ngIf="currentUser; else loginButton" (click)="logout()">
-      <a href="#">Test</a>
+      <a>{{ currentUser.hoTen }}/ Log Out</a>
     </div>
+    <!-- drop down menu after log in  -->
+    <!-- <div class="user-panel dropdown" *ngIf="currentUser; else loginButton">
+        <a id="dropdownMenuButton" class="dropdown-toggle" data-toggle="dropdown">{{ currentUser.hoTen }}/ Log Out</a>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+      </div>
+  </div> -->
     <!-- login button  -->
     <ng-template #loginButton>
       <div class="user-panel">
@@ -16,12 +25,14 @@
     <!-- end login button  -->
     <ul class="main-menu">
       <li><a href="./index.html">Home</a></li>
-      <li><a href="./about.html">About us</a></li>
+      <li class="dropdown">
+        <a href="./about.html">About us</a></li>
       <li><a href="./service.html">Services</a></li>
       <li><a href="./blog.html">News</a></li>
-      <li><a href="./contact.html">Contact</a></li>
+      <li><a id="test" routerLink="/user/home" *ngIf="currentUser">DashBoard</a></li>
     </ul>
   </div>
 </header>
 
 <log-in-component></log-in-component>
+<sign-up-component></sign-up-component>

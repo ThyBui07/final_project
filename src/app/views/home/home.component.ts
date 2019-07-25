@@ -22,7 +22,17 @@ slides = [
   {name: 'Williams Belly1', job: 'Accounts'}
 
 ];
-slideConfig = {
+
+images = [
+  {client: "../../../assets/img/clients/client-1.png"},
+  {client: "../../../assets/img/clients/client-2.png"},
+  {client: "../../../assets/img/clients/client-3.png"},
+  {client: "../../../assets/img/clients/client-4.png"},
+  {client: "../../../assets/img/clients/client-5.png"},
+  {client: "../../../assets/img/clients/client-6.png"},
+];
+
+slideConfig1 = {
   slidesToShow: 3,
   slidesToScroll: 3,
   autoplay: true,
@@ -55,6 +65,15 @@ slideConfig = {
   ],
 };
 
+slideConfig2 = {
+  infinite: true,
+  slidesToShow: 4,
+  slidesToScroll: 3,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  dots: true,
+}
+
   constructor(private courseService: CourseService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
@@ -65,7 +84,7 @@ slideConfig = {
 
   showList(){
     this.courseService.listAll().then((res) => {
-      console.log(res);
+      // console.log(res);
       this.courses = res;
     });
   }
