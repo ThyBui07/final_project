@@ -25,13 +25,13 @@ export class SignUpComponent implements OnInit {
   }
 
   async signup() {
-    const res = await this.userService.signup(this.user);
-    console.log(res);
-    if (typeof res === 'string') {
-      alert(res);
-    } else {
-      const { taiKhoan, matKhau } = res;
-      await this.authenticationService.login({ taiKhoan, matKhau });
-    }
+    // const res = await this.userService.signup(this.user);
+    // console.log(res);
+    // if (typeof res === 'string') {
+    //   alert(res);
+    // } else {
+    //   const { taiKhoan, matKhau } = res;
+    //   await this.authenticationService.login({ taiKhoan, matKhau });
+    // }
   }
 }
